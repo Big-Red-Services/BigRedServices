@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "system-ui";
+  color: #333;
+}
+
+.home{
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: auto;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar .links a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+
+.navbar .links a:hover {
+  color: #ad0807;
+}
+
+.navbar .logo img{
+  position:relative;  
+  top: 5px;
+  width: 297px;
+  height: 45px;
+}
+
+.navbar .links .postJob img{
+  width: 158px;
+  height: 44px;
+}
+
+.navbar .links .clickable {
+  position:relative;  
+  top: 2px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 48px;
+}
+
+.navbar .links .message img{
+  width: 140px;
+  height: 50px;
+}
+
+
+.navbar .links .button-24 {
+  background: #ad0807;
+  border: 1px solid #ad0807;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 8px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.navbar .links .button-24:hover,
+.navbar .links .button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ad0807;
+}
+
+.navbar .links .button-24:active {
+  opacity: .5;
+}
+
+.card {
+  width: 445px;
+  height: 200px;
+  border: 2px solid #DED1D1;
+  border-radius: 6px;
+  padding: 0px;
+  margin: 0px 0px 20px;
+  margin-right: 20px;
+  background-color: #EFEFEF;
+  position: relative;
+}
+
+.title {
+  margin: 0px 0px 20px;
+}
+
+.cards{
+  width: 100vw;
+  height: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card .cardInner {
+  padding: 10px;
+  display: inline-flex;
+}
+
+.card .cardInner .paid {
+  padding-right: 100px;
+}
+.card .cardInner .paid h2 {
+  color:#1588c2;
+}
+.card .cardInner .expire h2{
+  color: #ad0807;
+}
+
+.card .info {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card .info p {
+  font-size: 20px;
+}
+
+
+.card .butt .button-24 {
+  background: #ad0807;
+  border: 1px solid #ad0807;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 8px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+
+}
+
+.card .butt .button-24:hover,
+.card .butt .button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ad0807;
+}
+
+.card .butt .button-24:active {
+  opacity: .5;
+}
+
+.card .butt {
+  position: absolute;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.progressPage h1{
+  text-align: center;
+  margin: 30px;
+  color: Red;
+}
+.progressPage h2{
+  text-align: center;
+  margin: 30px
+}
