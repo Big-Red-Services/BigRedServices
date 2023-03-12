@@ -1,0 +1,66 @@
+
+
+.Post {
+    border-radius: 10px;
+
+    border: 1px solid #e6e6e6;
+
+    background-color: #fff;
+
+    margin-bottom: 20px;
+
+    margin-left : 1.5%;
+
+    margin-right: 1.5%;
+
+    display: inline-block;
+    
+    justify-content: center;
+
+    flex: 1
+  }
+
+.Post-monetary-status {
+    color: rgb(41, 232, 123);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 5px;
+    font-weight: bold;
+}
+
+.Post-time-status{
+
+    color: rgb(5, 231, 252);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 0px;
+    font-weight: bold;
+}
+
+.Post-expiration-status{
+    color: rgb(244, 3, 39);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 5px;
+    font-weight: bold;
+    align-items: right;
+}
+
+.Post-Job-Description{
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 5px;
+    font-weight: bold;
+}
+
+.Payment{
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: bottom;
+    justify-content: bottom;
+    margin-right: 20px;
+    height: 12px;
+    width:40px;
+}
+
+
