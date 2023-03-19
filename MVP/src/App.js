@@ -1,22 +1,25 @@
-import LandingPage from './pages/LandingPage';
-import PostPage from './pages/PostPage';
+import './App.css';
 import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import HomePage from './pages/HomePage';
+import CreatePage from './pages/CreatePage';
+import SettingsPage from './pages/SettingsPage';
 import MessagePage from './pages/MessagePage';
-import ProfilePage from './pages/ProfilePage';
-import ConfirmPage from './pages/ConfirmPage';
-
+import JobsPage from './pages/JobsPage';
+import ConfirmationPage from './pages/ConfirmationPage';
+import LearnModal from './components/LearnModal';
 
 function App() {
-
   return (
     <div className="App">
+      <LearnModal/>
       <BrowserRouter>
       <Routes>
-        <Route index element={<LandingPage />} />
-        <Route path="/post" element={<PostPage />} />
-        <Route path="/messages" element={<MessagePage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/confirm" element={<ConfirmPage />} />
+        <Route index element={<HomePage/>}/>
+        <Route path='/create' element={<CreatePage/>}/>
+        <Route path='/settings' element={<SettingsPage/>}/>
+        <Route path='/messages' element={<MessagePage/>}/>
+        <Route path='/jobs' element={<JobsPage/>}/>
+        <Route path='/confirm' element={<ConfirmationPage/>}/>
       </Routes>
       </BrowserRouter>
     </div>

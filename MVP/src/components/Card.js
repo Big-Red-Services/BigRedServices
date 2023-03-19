@@ -1,29 +1,32 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
+
 const Card = (props) => {
-    const { paid, time, dayNum, dayPlural,info} = props;
+    const { title, info, time, comp} = props;
 
-    const handleClick = (e) => {
-        window.location.href = "http://localhost:3000/confirm";
-    }
+    let navigate = useNavigate(); 
+    const routeChangeLearn = () =>{ 
+        let path = `/learn`; 
+        navigate(path);
+      }
 
-    return (  
-        <div className = "card">
-            <div className="cardInner">
-                <div className="paid">
-                <h2>{paid} • {time}</h2>
-                </div>
-                <div className="expire">
-                    <h2>expires in {dayNum} {dayPlural}</h2>
-                </div>
+    return ( 
+    <div className="card w-100 bg-base-100 shadow-lg mb-5 ml-5 mr-5 border border-black border-opacity-25 rounded-25">
+        <div className="card-body px-5 py-5">
+            <h2 className="card-title text-3xl">{title}</h2>
+            <div className="flex text-left text-lg">  
+            <h1>Time Commitment: </h1>
+            <div className="badge badge-primary ml-1 mt-1 py-2">~{time} hours</div>
             </div>
-            <div className="info">
-                <p>{info}</p>
+            <div className="flex text-left text-lg">  
+            <h1>Compensation: </h1>
+            <div className="badge badge-primary ml-1 mt-1 py-2">${comp} per hour</div>
             </div>
-            <div className="butt">
-                <button class="button-24" role="button" onClick={(e) => handleClick(e)}>confirm</button>
+            <p className="text-left">{info}</p>
+            <div className="card-actions justify-end">
+            <label htmlFor="my-modal" className="btn btn-secondary">Learn More</label>
             </div>
         </div>
-
+    </div>
     );
 }
  
