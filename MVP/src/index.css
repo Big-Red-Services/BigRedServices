@@ -196,10 +196,57 @@
 
 .progressPage h1{
   text-align: center;
-  margin: 30px;
+  align-content: center;
   color: Red;
 }
 .progressPage h2{
   text-align: center;
+  justify-content: center;
+  align-items: center;
   margin: 30px
+}
+
+.confirmationPage h1{
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  color: Red;
+  position: absolute;
+  top: 40%;
+  left: 33.333%;
+  transform: translateY(-50%);
+}
+.confirmationPage h2{
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 32.5%;
+  transform: translateY(-50%);
+  color: #DED1D1;
+}
+
+.confirmationPage body { 
+  background-image:url('https://cdn.dribbble.com/users/623359/screenshots/3061757/rocket_launch.gif'); background-repeat:repeat; 
+  background-size: cover;
+
+  height: 100vh;
+  padding:0;
+  margin:0;
+}
+
+.homeButton{
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: absolute;
+  top: 60%;
+  -ms-transform: translateY(-70%);
+  transform: translateY(-70%);
+  transform: translateX(500%);
+  font-size: large;
+  background-color: rgba(4, 251, 169, 0.832);
+  color: rgb(236, 6, 6);
+  border-color: orange;
 }
