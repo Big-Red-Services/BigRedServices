@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 
 export default function SettingsPage() {
-    const [theme, setTheme] = useState('night');
+    const [theme, setTheme] = useState('dracula');
   const toggleTheme = () => {
-    setTheme(theme === 'night' ? 'light' : 'dracula');
+    setTheme(theme === 'dracula' ? 'light' : 'dracula');
   };
   // initially set the theme and "listen" for changes to apply them to the HTML tag
   useEffect(() => {

@@ -1,3 +1,6 @@
+import { useState } from "react";
+
+
 const JobTitle = () => {
 
     return (  
@@ -6,7 +9,7 @@ const JobTitle = () => {
                 <label className="label">
                 <span className="label-text text-xl">Job Title</span>
                 </label>
-                <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs text-lg" />
+                <input type="text" placeholder="Type here" required className="input input-bordered w-full max-w-xs text-lg" />
             </div>
         </div>
     );

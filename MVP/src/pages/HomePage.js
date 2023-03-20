@@ -1,8 +1,17 @@
 import Card from "../components/Card";
 import Filter from "../components/Filter";
 import Navbar from "../components/Navbar";
+import { getPosts, pb } from '../lib/pocketbase'
+import { useEffect, useState } from "react";
 
 export default function HomePage() {
+    const [ posts, setPosts ] = useState([]);
+
+    useEffect(() => {
+        getPosts().then((res) => setPosts(res));
+    }, []);
+    
+
     return (
     <div className="bg-base-300 text-base-content">
         <Navbar/>
@@ -11,19 +20,14 @@ export default function HomePage() {
             <Filter/>
             </div>
             <div>
-                <article className="prose">
-                    <h3 className="text-4xl px-5 pt-5 text-left mb-5">All Job Postings</h3>
-                </article>
-                <Card title='IOS Developer' time='15' comp = '20' info = 'I need someone who knows how to build a full-stack iOS app from scratch. We have hi-fidelity wireframes and need a developer.'/>
-                <Card title='Full Stack Developer' time='30' comp = '15' info = 'We are building a website that seeks to connect entrepreneurships with developers. We need an expert in HTML/CSS, Flask, and JavaScript.'/>
-                <Card title='Python Programmer' time='20' comp = '5' info = 'I have a spreadsheet of 1000+ data points that I need cleaned up and analyzed by someone who knows Python.'/>
-                <Card title='test tester testy' time='0' comp = '0' info = 'test'/>
-                <Card title='test tester testy' time='0' comp = '0' info = 'test testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestt esttesttesttesttesttesttesttestte sttesttesttesttesttesttesttesttesttesttesttesttesttesttes esttesttesttesttesttesttesttestte  esttesttesttesttesttesttesttestte  esttesttesttesttesttesttesttestte  esttesttesttesttesttesttesttestte  esttesttesttesttesttesttesttestte  esttesttesttesttesttesttesttestte  esttesttesttesttesttesttesttestte  esttesttesttesttesttesttesttestte v '/>
-                <Card title='Full Stack Developer' time='30' comp = '15' info = 'We are building a website that seeks to connect entrepreneurships with developers. We need an expert in HTML/CSS, Flask, and JavaScript.'/>
-                <Card title='Python Programmer' time='20' comp = '5' info = 'I have a spreadsheet of 1000+ data points that I need cleaned up and analyzed by someone who knows Python.'/>
-                <Card title='IOS Developer' time='15' comp = '20' info = 'I need someone who knows how to build a full-stack iOS app from scratch. We have hi-fidelity wireframes and need a developer.'/>
-                <Card title='Full Stack Developer' time='30' comp = '15' info = 'We are building a website that seeks to connect entrepreneurships with developers. We need an expert in HTML/CSS, Flask, and JavaScript.'/>
-                <Card title='Python Programmer' time='20' comp = '5' info = 'I have a spreadsheet of 1000+ data points that I need cleaned up and analyzed by someone who knows Python.'/>
+            <article className="prose">
+                        <h3 className="text-4xl px-5 pt-5 text-left mb-5">All Job Postings</h3>
+                    </article>
+            {posts.map((post) => (
+                <div key={post.id}>
+                    <Card title={post.title} role = {post.role} time={post.time} compensation = {post.compensation} description = {post.description}/>
+                </div>
+            ))}
             </div>
         </div>
     </div>
