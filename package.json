@@ -1,5 +1,23 @@
 {
   "dependencies": {
+    "create-react-app": "^5.0.1",
     "package.json": "^2.0.1"
-  }
+  },
+  "name": "gig-eship",
+  "description": "Organization page for BRS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Big-Red-Services/BigRedServices.git"
+  },
+  "author": "Web Dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Big-Red-Services/BigRedServices/issues"
+  },
+  "homepage": "https://github.com/Big-Red-Services/BigRedServices#readme"
 }
