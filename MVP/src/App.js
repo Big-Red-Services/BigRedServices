@@ -7,6 +7,8 @@ import MessagePage from './pages/MessagePage';
 import JobsPage from './pages/JobsPage';
 import ConfirmationPage from './pages/ConfirmationPage';
 import LearnModal from './components/LearnModal';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path='/messages' element={<MessagePage/>}/>
         <Route path='/jobs' element={<JobsPage/>}/>
         <Route path='/confirm' element={<ConfirmationPage/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/signup' element={<SignupPage/>}/>
       </Routes>
       </BrowserRouter>
     </div>

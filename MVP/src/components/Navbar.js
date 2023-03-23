@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { isUserValid, signout } from "../lib/pocketbase";
+import Profile from "./Profile";
 const Navbar = () => {
 
     let navigate = useNavigate(); 
@@ -12,19 +14,21 @@ const Navbar = () => {
         navigate(path);
       }
 
-    const routeChangeSettings = () =>{ 
-        let path = `/settings`; 
+    const routeChangeLogin = () =>{ 
+        let path = `/login`; 
         navigate(path);
       }
 
-    const routeChangeMessage = () =>{ 
-        let path = `/messages`; 
+    const routeChangeSignup= () =>{ 
+        let path = `/signup`; 
         navigate(path);
       }
       const routeChangeJobs = () =>{ 
         let path = `/jobs`; 
         navigate(path);
       }
+
+
       
 
     return (  
@@ -33,26 +37,11 @@ const Navbar = () => {
             <a className="btn btn-ghost normal-case text-3xl" onClick={routeChangeHome}><span className="text-primary">Gig</span>Eship</a>
         </div>
         <div className="flex-none">
-            <button className="btn btn-secondary normal-case mr-5 text-xl px-3 py-2" onClick={routeChangeCreate}>+ Post a Job</button>
-            
+            {isUserValid ? <button className="btn btn-secondary normal-case mr-5 text-xl px-3 py-2" onClick={routeChangeCreate}>+ Post a Job</button> : null}
+            {!isUserValid ? <button className="btn btn-neutral normal-case mr-5 text-xl px-3 py-2" onClick={routeChangeLogin}>Login</button> : null}
+            {!isUserValid ? <button className="btn btn-neutral normal-case mr-5 text-xl px-3 py-2" onClick={routeChangeSignup}>Sign Up</button> : null}
         </div>
-        <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-                <img src="monkey.png" />
-            </div>
-            </label>
-            <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                <li>
-                <a className="justify-between" onClick={routeChangeMessage}>Messages</a>
-                </li>
-                <li>
-                <a className="justify-between" onClick={routeChangeJobs}>My Jobs</a>
-                </li>
-                <li><a onClick={routeChangeSettings}>Settings</a></li>
-                <li><a>Logout</a></li>
-            </ul>
-        </div>
+        { isUserValid ? <Profile /> : null }
     </div>
 
     );

@@ -41,7 +41,7 @@ export default function CreatePage() {
             return;
         }
         createPost(title,description,skills,role,time,comp);
-        navigate("/confirm");
+        navigate("/");
     };
 
     return (

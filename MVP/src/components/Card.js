@@ -28,7 +28,7 @@ const Card = (props) => {
             </div>
             <p className="text-left">{description}</p>
             <div className="card-actions justify-end">
-            <label htmlFor="my-modal" className="btn btn-secondary">Learn More</label>
+            <label htmlFor="my-modal" className="btn btn-secondary">Apply Now</label>
             </div>
             </div>
         </div>
