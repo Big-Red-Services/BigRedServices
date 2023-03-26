@@ -13,12 +13,6 @@
   }
 }
 
-body {
-  margin-left: 258px;
-  margin-right: 258px;
-}
-
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -38,7 +32,6 @@ body {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
